@@ -21,14 +21,14 @@ class Intro extends Component{
 
 
 			<Fragment>
-				<div></div>
+				<div> There she blows </div>
 
 			</Fragment>
 		)
 	}
 }
 
-// export default Intro;
+export default Intro;
 
 // export default ({Component, pageProps}) => (
 //   <MDXProvider components={mdComponents}>
@@ -36,8 +36,8 @@ class Intro extends Component{
 //   </MDXProvider>
 // )
 
-export default ({Component, theProps}) => (
-	<MDXProvider components={Intro}>
-		<Component {...props} />
-	</MDXProvider>
-)
+// export default ({Component, theProps}) => (
+// 	<MDXProvider components={Intro}>
+// 		<Component {...this.props} />
+// 	</MDXProvider>
+// )
