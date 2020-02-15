@@ -1,8 +1,30 @@
-import Intro from './_intro.js'
+import Cover from './_intro.js'
+import { 
+	Box,
+	Card,
+	Image,
+	Heading,
+	Text,
+	Flex,
+	Link
+} from 'rebass'
 
-< Intro />
+< Cover />
 
 # Assessment Data
+
+<Flex
+	px={2}
+	color='white'
+	bg='black'
+	alignItems='center'>
+	<Text p={2} fontWeight='bold'>Data Dictionary V1</Text>
+	<Box mx='auto'/>
+	<Link variant='nav' href='#'>
+		Concept
+	</Link>
+</Flex>
+
 
 ## Date of Assessment Attempt:
 ### Definition

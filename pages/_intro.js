@@ -2,7 +2,7 @@ import React, {Component, Fragment} from 'react'
 import {MDXProvider} from '@mdx-js/react'
 
 
-class Intro extends Component{
+class Cover extends Component{
 	constructor(props){
 		super(props)
 
@@ -28,16 +28,4 @@ class Intro extends Component{
 	}
 }
 
-export default Intro;
-
-// export default ({Component, pageProps}) => (
-//   <MDXProvider components={mdComponents}>
-//     <Component {...pageProps} />
-//   </MDXProvider>
-// )
-
-// export default ({Component, theProps}) => (
-// 	<MDXProvider components={Intro}>
-// 		<Component {...this.props} />
-// 	</MDXProvider>
-// )
+export default Cover;
