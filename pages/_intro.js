@@ -9,10 +9,13 @@ import {
 	Flex,
 	Link
 } from 'rebass'
+import {main_description,heading,heading2, ol1,ol2,ol3,ol4,ol5} from '../text.json'
 
 class Cover extends Component{
 	constructor(props){
 		super(props)
+
+
 
 		this.state = {
 			empty:false
@@ -25,28 +28,78 @@ class Cover extends Component{
 
 	render(){
 		return (
-
-
 			<Fragment>
 				<div> Cover component </div>
 				<Flex
-					px={2}
+					px={1}
 					color='white'
 					flexDirection='column'
-					justifyContent='center'>
-					<Box
-						bg='black'
-						justifyContent='column'
-						width='33%'
-						height={500}
+					justifyContent='center'
+					height={100}
+					width='100%'
+					>
+					<Heading
+						color='black'
+						
 						>
-						<Text p={2} fontWeight='bold'>Data Dictionary V1
+						Data Dictionary
+					</Heading>
+					<Box
+						bg='grey'
+						p={3}
+						justifyContent='column'
+						>
+						<Text 
+							fontWeight='bold'
+							color='black'
+							>
+							{heading}
+
 						</Text>
+						<br/>
+						<Text>
+							<div>
+								{main_description}	
+							</div>
+							<br/>
+							<div className='heading2'>
+								{heading2}
+								<ul>
+									<li>
+										{ol1}
+									</li>
+									<li>
+										{ol2}
+									</li>
+									<li>
+										{ol3}
+									</li>
+									<li>
+										{ol4}
+									</li>
+									<li>
+										{ol5}
+									</li>
+								</ul>
+								
+							</div>
+							
+						</Text>
+
+
+
+						<Link 
+							textStyle='normal'
+							colorStyle='white'
+							variant='nav' 
+							href='#' 
+
+						>
+						Concept
+						</Link>
 					</Box>
 					
-					<Link variant='nav' href='#'>
-						Concept
-					</Link>
+					
 				</Flex>
 			</Fragment>
 		)

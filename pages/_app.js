@@ -26,5 +26,7 @@ const components = {
 export default ({Component, pageProps}) => (
   <MDXProvider components={components}>
     <Component {...pageProps} />
+    
   </MDXProvider>
 )
+
