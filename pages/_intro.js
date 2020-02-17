@@ -35,7 +35,6 @@ class Cover extends Component{
 	render(){
 		return (
 			<Fragment>
-				<div> Cover component </div>
 				<Flex
 					px={1}
 					color='white'

@@ -1,4 +1,6 @@
 import React, {Component, Fragment} from 'react'
+import Cover from './_intro.js'
+import NavBar from './_navbar.js'
 import {MDXProvider} from '@mdx-js/react'
 import { 
 	Box,
