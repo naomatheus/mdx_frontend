@@ -10,6 +10,7 @@ import {
 	Text,
 	Flex
 } from 'rebass'
+import '../css/main.css'
 
 const mdComponents = {
   h1: props => <h1 style={{color: 'red'}} {...props} />

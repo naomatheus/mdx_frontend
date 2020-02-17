@@ -91,8 +91,6 @@ class Cover extends Component{
 							
 						</Text>
 					</Box>
-					
-					
 				</Flex>
 			</Fragment>
 		)

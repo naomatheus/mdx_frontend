@@ -13,6 +13,7 @@ import {
 
 
 
+
 class App extends Component {
 	constructor(props){
 		super(props)
@@ -34,11 +35,22 @@ class App extends Component {
 					width='100%'
 					mx='auto'
 					minHeight='100%'
-					flexDirection='row-reverse'
-					justifyContent='space-around'
-					alignItems='center'
+					flexDirection='row'
+					justifyContent='space-between'
+					alignItems='stretch'
+					bg='red'
+					p={10}
+					my={1}
 				>
 					<NavBar/>
+					
+				</Box>
+				<Box
+					maxWidth='82%'
+					flexDirection='row'
+					justifyContent='space-between'
+					alignItems='stretch'
+				>
 					<Cover />
 				</Box>
 				</Flex>
