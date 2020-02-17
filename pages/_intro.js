@@ -18,13 +18,19 @@ class Cover extends Component{
 
 
 		this.state = {
-			empty:false
+			empty:false,
+			json: false
+		}
+
+		const parseJson = (json) => {
+
 		}
 	}
 	/* 
 		return parsed JSON from Postgres, gathered expediently by psycopg2
 		map over and render as component the returned JSON from dataframe 
 	*/
+	
 
 	render(){
 		return (
@@ -34,7 +40,7 @@ class Cover extends Component{
 					px={1}
 					color='white'
 					flexDirection='column'
-					justifyContent='center'
+					justifyContent='space-between'
 					height={100}
 					width='100%'
 					>
@@ -47,7 +53,7 @@ class Cover extends Component{
 					<Box
 						bg='grey'
 						p={3}
-						justifyContent='column'
+						justifyContent='center'
 						>
 						<Text 
 							fontWeight='bold'
@@ -85,18 +91,6 @@ class Cover extends Component{
 							</div>
 							
 						</Text>
-
-
-
-						<Link 
-							textStyle='normal'
-							colorStyle='white'
-							variant='nav' 
-							href='#' 
-
-						>
-						Concept
-						</Link>
 					</Box>
 					
 					
