@@ -71,8 +71,6 @@ class NavBar extends Component{
 				console.log(
 					`${nest_k},${nest_v}`
 					)
-				
-
 				return (
 					<Fragment>
 					<li>{value.pageTitle}</li>
@@ -82,7 +80,10 @@ class NavBar extends Component{
 					</Fragment>
 					)
 				}
+
+			
 			}
+			
 
 			
 		}
