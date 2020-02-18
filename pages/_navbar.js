@@ -15,25 +15,84 @@ class NavBar extends Component{
 
 
 		this.state = {
-			empty:'for now'
+			numbers: [1,2,3,4,5],
+			nestedNums: {
+				1: {
+					pageTitle: 'Introduction',
+					pageNums: {
+						1.1 : 'Generating a Business Rules Catalog',
+						1.2 : 'MDX - Markdown',
+						1.3 : 'Gatsby',
+						1.4 : 'Next.js'
+					}
+				},
+				2: {
+					pageTitle: 'Importing your Data Dictionary',
+					pageNums: {
+						2.1:'Getting Started',
+						2.2:'Formatting Your Excel Document',
+						2.3:'Errors',
+						2.4:'What to Expect'
+					}
+				},
+				3: {
+					pageTitle: 'Customization',
+					pageNums:{
+						3.1:'Available Features',
+						3.2:'Pricing',
+						3.3:'Ad Hoc Support',
+						3.4:'JSON, CSV, and Other Import Formats'
+					}
+				}
+
+
+			}
 		}
+
+
+		// This nav should generate links and sublinks from json files
+		// Links to be generated will need to be passed to the state of this NavBar component
 
 	}
 
 	render() {
+		
+		const listItems = this.state.numbers.map((number) => {
+			return (<li key={number.toString()}>{number}</li>)
+		})
+
+		const mapNavigation = (state) => {
+
+			for (let [key,value] of Object.entries(state)){
+				console.log(`${key},${value.pageTitle}`)
+
+
+				for (let [nest_k,nest_v] of Object.entries(value.pageNums)){
+				console.log(
+					`${nest_k},${nest_v}`
+					)
+				}
+			}
+
+			
+		}
+		
+
+
 		return (
 			<Flex>
-				
-	
 				<Box
 					flexDirection='column'
 					justifyContent='space-evenly'
 					alignItems='flex-start'
 				>
-					<div>Links</div>
-					<div>Links</div>
-					<div>Links</div>
-					<div>Links</div>
+					<ul>
+						{listItems}
+
+					</ul>
+					<ul>
+						{mapNavigation(this.state.nestedNums)}
+					</ul>
 				</Box>
 				
 			</Flex>

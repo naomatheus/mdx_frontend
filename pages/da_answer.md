@@ -4,7 +4,7 @@ import NavBar from './_navbar.js'
 import App from './main.js'
 
 
-# Main Markdown 
+# Generated Webpage 
 
 
 < App /> 

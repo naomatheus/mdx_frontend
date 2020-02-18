@@ -39,9 +39,6 @@ class Cover extends Component{
 					px={1}
 					color='white'
 					flexDirection='column'
-					justifyContent='space-between'
-					height={100}
-					width='100%'
 					>
 					<Heading
 						color='black'
@@ -49,6 +46,7 @@ class Cover extends Component{
 						>
 						Data Dictionary
 					</Heading>
+
 					<Box
 						bg='grey'
 						p={3}

@@ -1,6 +1,7 @@
 import React, {Component, Fragment} from 'react'
 import Cover from './_intro.js'
 import NavBar from './_navbar.js'
+import Content from './content.js'
 import {MDXProvider} from '@mdx-js/react'
 import { 
 	Box,
@@ -25,35 +26,51 @@ class App extends Component {
 
 	render(){
 		return (
-
-				<Flex
-					flex='flex'
-					minHeight='100%'
-
-				>
+		<Flex
+			className='docs-main'
+		>
+			<Flex
+				className='docs-navbar--flex'
+				flex='flex'
+				minHeight='100%'
+				flexDirection='row'
+				width='100%'
+				bg='red'
+			>
 				<Box
-					width='100%'
-					mx='auto'
-					minHeight='100%'
-					flexDirection='row'
-					justifyContent='space-between'
-					alignItems='stretch'
-					bg='red'
+					className='docs-navbar'
+					width='23.3%'
+					mx={10}
 					p={10}
 					my={1}
 				>
 					<NavBar/>
 					
 				</Box>
+			</Flex>
+
+			<Flex
+				className='docs-content--align'
+				flexDirection='column'
+			>
+
 				<Box
-					maxWidth='82%'
-					flexDirection='row'
-					justifyContent='space-between'
-					alignItems='stretch'
+					className='docs-cover'
+					
 				>
-					<Cover />
+					<Cover /> 
 				</Box>
-				</Flex>
+				
+				<Box
+					className='docs-content'
+					
+				>
+					<Content/>                          
+				</Box>
+
+			</Flex>
+				
+		</Flex>
 			
 			)
 	}
