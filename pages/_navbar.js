@@ -61,7 +61,7 @@ class NavBar extends Component{
 			return (<li key={number.toString()}>{number}</li>)
 		})
 
-		const mapNavigation = (state) => {
+		const mapToNavigation = (state) => {
 
 			for (let [key,value] of Object.entries(state)){
 				console.log(`${key},${value.pageTitle}`)
@@ -70,6 +70,16 @@ class NavBar extends Component{
 				for (let [nest_k,nest_v] of Object.entries(value.pageNums)){
 				console.log(
 					`${nest_k},${nest_v}`
+					)
+				
+
+				return (
+					<Fragment>
+					<li>{value.pageTitle}</li>
+						<ul>
+							<li>{nest_k,nest_v}</li>
+						</ul>
+					</Fragment>
 					)
 				}
 			}
@@ -91,7 +101,7 @@ class NavBar extends Component{
 
 					</ul>
 					<ul>
-						{mapNavigation(this.state.nestedNums)}
+						{mapToNavigation(this.state.nestedNums)}
 					</ul>
 				</Box>
 				
