@@ -14,7 +14,7 @@
     "fibers": "^4.0.2",
     "fsevents": "^2.1.2",
     "next": "^9.2.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "rebass": "^4.0.7",
